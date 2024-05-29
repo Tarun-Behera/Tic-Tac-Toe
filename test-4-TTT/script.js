@@ -4,14 +4,9 @@ let cells = Array.from(document.querySelectorAll(".cell"));
 let restart = document.querySelector("#reset");
 let turn = "X";
 let gameRunning = true;
-// let isgameover = false
 
 // function to switch turn
 const changeTurn = () => {
-  /* if (turn === 'X') 
-        return 'O'
-    else
-        return 'X' */
   return turn === "X" ? "O" : "X";
 };
 
@@ -40,10 +35,18 @@ const checkWin = () => {
     ) {
       message.innerText = cells[e[0]].innerText + " Won";
       gameRunning = false;
-      // isgameover = true
     }
   });
 };
+
+// game draw
+const checkDraw = ()=>{
+  if(cells.every(cell=>cell.innerText!=="")){
+    message.innerText = "Draw"
+    gameRunning = false
+  }
+}
+
 
 // game logic and clickable
 turnMessage();
@@ -54,9 +57,7 @@ cells.forEach((cell) => {
       turn = changeTurn();
       turnMessage();
       checkWin();
-      /*  if (!isgameover) {
-                turnMessage()
-            } */
+      checkDraw();
     }
   });
 });
