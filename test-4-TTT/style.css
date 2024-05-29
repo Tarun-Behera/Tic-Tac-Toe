@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    /* outline: 2px solid darkmagenta !important; */
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main {
+    background-color: rgb(228, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    font-family: 'Courier New';
+}
+
+/* .game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+} */
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px rgb(198, 191, 191);
+    margin-bottom: 2rem;
+    padding: 5px;
+    text-align: center;
+}
+
+#game-container {
+    background-color: rgb(227, 233, 236);
+    box-shadow: 10px 10px 20px rgb(190, 190, 190), -10px -10px 20px rgba(255, 255, 255, 0.635);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: lightgrey;
+    box-shadow: 5px 5px 10px rgba(162, 160, 160, 0.895), -5px -5px 5px rgba(245, 245, 245, 0.653);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    transition: all .2s ease-in-out;
+}
+
+.cell:hover {
+    transform: translate(-5px);
+    box-shadow: inset 2px 2px 5px #b7b7b7b7,inset -2px -2px 3px rgb(255, 255, 255)
+     , 5px 5px 10px rgba(162, 160, 160, 0.895), -5px -5px 5px rgba(245, 245, 245, 0.653) ;
+    background-color: #dfdfdf;
+}
+
+.message-container {
+    margin-top: 2rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#reset {
+    margin-top: 20px;
+    border: none;
+    background: royalblue;
+    color: white;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(162, 160, 160, 0.895), -5px -5px 5px  rgba(245, 245, 245, 0.653);
+    transition: all .2s ease-in-out;
+
+}
+#reset:hover{
+    box-shadow: inset 2px 2px 5px #044e94e9,inset -2px -2px 5px rgb(129, 162, 244)
+     , 5px 5px 10px rgba(162, 160, 160, 0.895), -5px -5px 5px rgba(245, 245, 245, 0.653) ;
+     background-color: rgba(7, 100, 176, 0.845);
+     transform: translate(5px);
+}
