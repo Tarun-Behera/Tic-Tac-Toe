@@ -7,3 +7,6 @@ Although all might not agree with the design part but i still feel like it is be
 About the game:- 
 ---The game is played between two people , where one is X and the other one is O.
 When all the columns or rows of same symbole i.e either X or O is matched ,the person is the winner.
+
+I think i have achieved a good css knowledge by doing this.
+link:- https://tic-tac-toe-css.vercel.app/
